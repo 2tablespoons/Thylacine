@@ -16,9 +16,11 @@ Um, anything you want–so long as it's 1 file. For example, you could sell:
 * A collection of stock photography, inside a .zip file
 * Code you want to sell, inside a .zip file 
 
+Remember, 1 file. Thylacine is not a shopping cart. It doesn't calculate sales tax, shipping, or require registration. A person goes to the site, they give you money, they get a file.
+
 == What's a Thylacine?
 
-While it sounds like a new anti-depressant, a Thylacine is actually an extinct carnivorous marsupial once native to Australia. The Thylacine was also known as the "Tasmanian tiger" because it had stripes on its back. Since this app uses Stripe for payment processing, I figured I'd name it after some sort of striped animal. Zebra and Tiger seemed boring. 
+While it sounds like a new prescription anti-depressant, a Thylacine is actually an extinct carnivorous marsupial once native to Australia. The Thylacine was also known as the "Tasmanian tiger" because it had stripes on its back. Since this app uses Stripe for payment processing, I figured I'd name it after some sort of striped animal. Zebra and Tiger seemed boring. 
 
 http://en.wikipedia.org/wiki/Thylacine
 
