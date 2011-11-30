@@ -6,6 +6,16 @@ Sell a file with your Stripe account and Ruby on Rails.
 
 Thylacine is a Rails 3.1 app that lets you sell a digital using your Stripe (www.stripe.com) account. It's designed for people who want to sell things like ebooks or code but not mess around with setting up a store or pay high transaction fees. 
 
+== What Can I Sell? 
+
+Um, anything you want–so long as it's 1 file. For example, you could sell: 
+
+* A PDF ebook
+* An ebook in multiple formats, inside a .zip file
+* An instructional video
+* A collection of stock photography, inside a .zip file
+* Code you want to sell, inside a .zip file 
+
 == What's a Thylacine?
 
 While it sounds like a new anti-depressant, a Thylacine is actually an extinct carnivorous marsupial once native to Australia. The Thylacine was also known as the "Tasmanian tiger" because it had stripes on its back. Since this app uses Stripe for payment processing, I figured I'd name it after some sort of striped animal. Zebra and Tiger seemed boring. 
@@ -15,3 +25,23 @@ http://en.wikipedia.org/wiki/Thylacine
 http://upload.wikimedia.org/wikipedia/commons/d/d5/Thylacinus.jpg
 
 == Setup and Configuration
+
+1. Clone the app
+
+2. Bundle install to get your gems in order 
+
+3. Create and migrate your database
+
+4. Edit config/initializers/stripe.rb and add your Stripe api key and publishable key
+
+5. Place your file (the one you're selling) in app/products/
+
+6. Edit config/product.yml and add the details about your product (including the file name from the previous step)
+
+At this point, the app is usable and you can sell your file. However, you'll want to edit the index view with all the great marketing copy about your product. The (HAML) file you want to edit is app/views/product/index.html.haml. 
+
+== Fulfillment
+
+After a successful purchase, the customer is directed to a "Thank you" page. There they are presented with a download button which streams the file when clicked. Both the thanks and download actions require a authentication token in order to work (this is a unique token generated for each order record).
+
+== 
