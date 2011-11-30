@@ -46,4 +46,6 @@ At this point, the app is usable and you can sell your file. However, you'll wan
 
 After a successful purchase, the customer is directed to a "Thank you" page. There they are presented with a download button which streams the file when clicked. Both the thanks and download actions require a authentication token in order to work (this is a unique token generated for each order record).
 
-== 
+== Special Thanks
+
+Other free and open source projects were used to build this. Ruby on Rails, Twitter Bootstrap, Startup Ipsum (site), and others all deserve props. 
