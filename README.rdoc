@@ -1,3 +1,17 @@
-== Thylacine
+= Thylacine
 
 Sell a file with your Stripe account and Ruby on Rails. 
+
+== What is it? 
+
+Thylacine is a Rails 3.1 app that lets you sell a digital using your Stripe (www.stripe.com) account. It's designed for people who want to sell things like ebooks or code but not mess around with setting up a store or pay high transaction fees. 
+
+== What's a Thylacine?
+
+While it sounds like a new anti-depressant, a Thylacine is actually an extinct carnivorous marsupial once native to Australia. The Thylacine was also known as the "Tasmanian tiger" because it had stripes on its back. Since this app uses Stripe for payment processing, I figured I'd name it after some sort of striped animal. Zebra and Tiger seemed boring. 
+
+http://en.wikipedia.org/wiki/Thylacine
+
+http://upload.wikimedia.org/wikipedia/commons/d/d5/Thylacinus.jpg
+
+== Setup and Configuration
