@@ -1,0 +1,99 @@
+.container
+
+  .hero-unit 
+    %h1= PRODUCT['name']
+    %p It's truly amazing. Our digital product will change your life forever. 
+    %p
+      = link_to purchase_label, '#purchase', :class => 'btn primary large'
+
+  .row
+    .span16
+      %h2 All About Our Awesome Product
+      %p Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying crowded market pivot onboarding freemium prototype ping pong. Early stage disruptive ecosystem community outreach dynamic location based strategic investor. 
+      %p Accelerator photo sharing business school drop out ramen hustle crush it revenue traction platforms. Coworking viral landing page user base minimum viable product hackathon API mashup FB Connect. Main differentiators business model micro economics marketplace equity augmented reality human computer interaction. Board members super angel preferred stock. Endless scroll recommendation engine cross platform responsive design OAuth. 
+      %p Tablet publishing HTML5 mobile first really simple syndication meetups white board walls. User experience iterate algorithm gamification semantic web value add market research stealth. Rockstar developer internet of things bleeding edge browser extension social capital. Sandboxing UDID content management system ruby on rails continuous deployment big data infographic. Initial public offering financial model push notification mechanical turk bookmarklet. Term sheet convertible note colluding bootstrapping. Cloud computing subscription model out of the box proactive solution.
+  
+  .row#preview
+    .span16
+      %h2 Here's a Preview
+    .span8
+      %p As you can see, our digital product is nothing short of amazing. After all, we designed it for us. We eat our own dogfood. 
+    .span8
+      = image_tag 'preview.jpg', :style => 'max-width:100%'
+  
+  .row
+    .span16
+      %h2 See What People are Saying
+  .row.testimonial
+    .span10.offset3.page
+      %p Dear Tom, 
+      
+      %p 
+        I just wanted to write you to say thanks. Your product completely changed my life. Since purchasing your .zip file, 
+        I have lost 25 pounds and 4 inches off my waist. My startup was just acquired and women won't leave me alone. 
+      
+      %p I owe it all to you. 
+      
+      %p Thanks, 
+      
+      %p
+        E.D.
+        %br
+        San Luis Obispo, CA
+  
+  .row#purchase
+    .span16
+      %h2 Purchase Now
+
+      %h3 Immediate delivery
+
+
+      %fieldset
+        = form_for @order, :url => '/product/process_order', :html => {:class => 'form'} do |f|
+          - if @order.errors.any?
+            .alert-message.block-message.error
+              %p #{pluralize(@order.errors.count, "problem")} with your registration:
+              .errors
+                - @order.errors.full_messages.each do |msg|
+                  %p= msg
+
+          .clearfix
+            = f.label :first, 'First and last name'
+            .input
+              .inline-inputs
+                = f.text_field :first, :class => "field span2", :placeholder => 'First'
+                = f.text_field :last,  :class => "field span3" , :placeholder => 'Last'
+
+          .clearfix
+            = f.label :email
+            .input
+              = f.text_field :email, :class => "field" , :placeholder => 'you@example.com'
+
+          #credit-card{:style => @order.last_4_digits ? "display:none" : "display:block"}
+            #credit-card-errors{:style => "display:none"}
+              #stripe-error-message.alert-message.block-message.error
+
+            / these fields are disabled before submission and are never transmitted back to rails
+            .clearfix
+              = label_tag :credit_card_number
+              .input
+                = text_field_tag :credit_card_number, params[:credit_card_number], :class => "field"
+
+            .clearfix
+              = label_tag :cvv, "Security code (CVV)"
+              .input
+                = text_field_tag :cvv, params[:cvv], :class => "small"
+
+            .clearfix
+              = label_tag :expiry_date
+              .input
+                = date_select "", :expiry_date, {:discard_day => true, :order => [:month, :year], :use_month_numbers => true, :start_year => Date.today.year, :end_year => Date.today.year + 25}, {:class => "small"}
+
+              /empty
+            %span.note
+              Your credit card details will be sent directly to our payment processor
+          .actions
+            = f.submit 'Purchase', :class => 'btn primary large', :id => "payment_button"
+            = f.hidden_field :stripe_token
+            = f.hidden_field :last_4_digits
+  

@@ -1,0 +1,2 @@
+Stripe.api_key = "KEY"
+STRIPE_PUBLISHABLE_KEY = "PUB KEY"

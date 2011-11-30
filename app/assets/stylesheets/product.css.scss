@@ -1,0 +1,23 @@
+// Place all the styles related to the Product controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	padding-top:60px;
+	
+	
+	.testimonial {
+		padding:20px 0;
+		.page {
+			background:#f2efcf;
+			border:1px solid #e3dd9a;
+			min-height:600px;
+			padding:20px 0;
+			font-family: 'Andale Mono', monospace;
+			p, ul {
+				font-size:16px;
+				line-height:20px;
+				padding:0 20px;
+			}
+		}
+	}
+}
