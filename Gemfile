@@ -5,6 +5,9 @@ gem 'mysql2'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'haml' 
 
+# This is necessary is you're deploying to Heroku
+gem 'pg' 
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
