@@ -6,6 +6,13 @@
     %p
       = link_to purchase_label, '#purchase', :class => 'btn primary large'
 
+  .alert-message.block-message.success
+    %p
+      %strong This store is in test mode. 
+      You can simulate a purchase by using the credit card number 4242424242424242, 
+      %br
+      any future expiration date, and any CVV number.
+
   .row
     .span16
       %h2 All About Our Awesome Product
@@ -21,7 +28,7 @@
     .span8
       = image_tag 'preview.jpg', :style => 'max-width:100%'
   
-  .row
+  .row#testimonials
     .span16
       %h2 See What People are Saying
   .row.testimonial

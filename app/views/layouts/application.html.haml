@@ -13,6 +13,10 @@
       .fill
         .container
           %a.brand{:href => '/'}= PRODUCT['name']
+          %ul.nav
+            %li= link_to 'Preview', '#preview'
+            %li= link_to 'Testimonials', '#testimonials'
+            %li= link_to 'Buy Now', '#purchase'
       
     = yield
 
