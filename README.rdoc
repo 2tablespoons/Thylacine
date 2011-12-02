@@ -20,7 +20,7 @@ Remember, 1 file. Thylacine is not a shopping cart. It doesn't calculate sales t
 
 == Demo 
 
-Demo coming soon
+View a demo deployed to Heroku at: http://thylacine.herokuapp.com 
 
 == What's a Thylacine?
 
@@ -49,6 +49,16 @@ At this point, the app is usable and you can sell your file. However, you'll wan
 == Fulfillment
 
 After a successful purchase, the customer is directed to a "Thank you" page. There they are presented with a download button which streams the file when clicked. Both the thanks and download actions require a authentication token in order to work (this is a unique token generated for each order record).
+
+== TO-DO List
+
+Planned features below. If you have feature requests or bugs, submit an issue or pull request. 
+
+* Send email receipt to customer
+* Add file deliver via email option
+* Monitor (and possibly limit) the number of downloads per customer
+* Add an admin view into all orders
+* Add an expiration date for downloads
 
 == A Note About SSL
 
